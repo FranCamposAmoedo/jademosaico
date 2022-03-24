@@ -1,3 +1,7 @@
 .navbar {
     background-color: hsl(0, 0%, 97%);
 }
+
+.logo {
+    margin-left: 10px;
+}

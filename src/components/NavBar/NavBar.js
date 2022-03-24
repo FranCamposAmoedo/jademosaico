@@ -1,11 +1,13 @@
 import "./NavBar.css";
+import "./CartWidget/CartWidget.js";
+import CartWidget from "./CartWidget/CartWidget.js";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src="../images/Logo-Jade.jpg" alt="" width="60" height="60"/>
+        <a className="navbar-brand logo" href="#">
+          <img src="../images/Logo-Jade.png" alt="" width="60" height="60" />
         </a>
         <button
           className="navbar-toggler"
@@ -34,6 +36,7 @@ const NavBar = () => {
             </a>
           </div>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );

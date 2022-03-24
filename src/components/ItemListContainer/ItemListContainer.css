@@ -1,0 +1,10 @@
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    font-family: sans-serif;
+    color: #81d8d0;
+    border: 1px solid #81d8d0;
+}
