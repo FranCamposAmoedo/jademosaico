@@ -4,7 +4,7 @@ import "./CartWidget.css";
 const CartWidget = () => {
     return (
         <button className="btnCarrito">
-            <CgShoppingCart />
+            <CgShoppingCart size ={25} />
             <a>0</a>
         </button>
     )
