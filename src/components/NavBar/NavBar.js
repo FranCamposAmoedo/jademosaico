@@ -23,13 +23,13 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
             <a className="nav-link" href="#">
-              Mesas
+              Bandejas
             </a>
             <a className="nav-link" href="#">
               Luminarias
             </a>
             <a className="nav-link" href="#">
-              Macetas
+              Platos
             </a>
             <a className="nav-link" href="#">
               Accesorios

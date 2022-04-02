@@ -1,0 +1,8 @@
+.card {
+    margin: 20px;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+}
