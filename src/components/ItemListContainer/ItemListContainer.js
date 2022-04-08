@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "./asynmock";
+import { getProducts } from "../asynmock";
 import ItemList from "./ItemList/ItemList";
 import "./ItemListContainer.css";
 
@@ -17,7 +17,11 @@ const ItemListContainer = (props) => {
   return (
     <>
       <h1 className="greeting">{props.greeting}</h1>
-      <ItemList products={products} />
+      {
+      products.length>0 ? 
+         <ItemList products={products} /> 
+      : <p>Loading...</p>
+      }
     </>
   );
 };
