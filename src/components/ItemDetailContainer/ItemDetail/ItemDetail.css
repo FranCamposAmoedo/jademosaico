@@ -1,15 +1,35 @@
-.container {
-    margin-top: 40px;
+.picture {
+    width: 28.5rem;
+    box-shadow: 2px 2px 12px black;
+}
+
+.contenedor {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4rem;
 }
 
-.card {
-    width: 18rem;
-}
-
-.info {
+.padre-detalles {
     display: inline-block;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+}
+
+.detalles {
+    display: block;
+    margin: 1rem;
+    padding: 2rem;
+    font-family: sans-serif;  
+}
+
+.detalles h5 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.precio {
+    font-size: 1.5rem;
 }

@@ -1,13 +1,15 @@
 import "./Item.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ name, img }) => {
+/* Componente que crea cada Card de cada producto que le va a pasar el ItemList */
+const Item = ({ id, name, img }) => {
   return (
     <div className="card">
       <img src={img} className="card-img-top" alt={name} />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">
-          <button className="btn btn-outline-secondary">Ver detalles</button>
+          <Link to={`/item/${id}`} className="btn btn-outline-secondary">Ver detalles</Link>
         </p>
       </div>
     </div>
