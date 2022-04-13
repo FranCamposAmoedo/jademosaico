@@ -1,12 +1,16 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 /* Traigo las propiedades desestructurando desde el ItemDetailContainer */
 const ItemDetail = ({ img, name, description, price, stock }) => {
 
-  /* Función que avisa cuánto productos se agregaron al carrito */
-  const handleOnAdd = (quantity) => {
-    console.log(`Se agregaron ${quantity} productos`);
+  const [quantity, setQuantity] = useState(0);
+
+  const handleOnAdd = (count) => {
+    setQuantity(count)
+    console.log(count)
   };
 
   return (
@@ -25,7 +29,7 @@ const ItemDetail = ({ img, name, description, price, stock }) => {
               </span>
             </p>
           </div>
-          <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+          {quantity > 0 ? <Link to="/cart" className="btn btn-outline-secondary goCart">¡Gracias por su compra! Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />}
         </div>
       </div>
     </>
