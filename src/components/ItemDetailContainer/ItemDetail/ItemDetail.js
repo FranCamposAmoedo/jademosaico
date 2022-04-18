@@ -1,16 +1,21 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../Context/CartContext";
 
 /* Traigo las propiedades desestructurando desde el ItemDetailContainer */
-const ItemDetail = ({ img, name, description, price, stock }) => {
+const ItemDetail = ({ id, img, name, description, price, stock }) => {
 
-  const [quantity, setQuantity] = useState(0);
+  const { addItem, isInCart } = useContext(CartContext);
 
   const handleOnAdd = (count) => {
-    setQuantity(count)
-    console.log(count)
+    
+    const productObj = {
+      id, name, price
+    }
+
+    addItem( {...productObj, quantity: count})
   };
 
   return (
@@ -29,7 +34,7 @@ const ItemDetail = ({ img, name, description, price, stock }) => {
               </span>
             </p>
           </div>
-          {quantity > 0 ? <Link to="/cart" className="btn btn-outline-secondary goCart">¡Gracias por su compra! Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />}
+          {isInCart(id) ? <Link to="/cart" className="btn btn-outline-secondary goCart">¡Gracias por su compra! Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />}
         </div>
       </div>
     </>

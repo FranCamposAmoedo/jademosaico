@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import "./CartWidget/CartWidget.js";
 import CartWidget from "./CartWidget/CartWidget.js";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getCategories } from "../asynmock";
 
@@ -36,7 +36,7 @@ const NavBar = () => {
         {/* Mediante un método map cargo cada una de las categorías trayendolas desde el Async Mock */}
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="categories navbar-nav ms-auto">
-            { categories.map(cat => <NavLink className="nav-link" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</NavLink>)}
+            { categories.map(cat => <Link className="nav-link" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</Link>)}
           </div>
         </div>
         {/* Llamo al componente del carrito */}
