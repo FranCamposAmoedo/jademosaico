@@ -2,12 +2,14 @@ import "./NavBar.css";
 import "./CartWidget/CartWidget.js";
 import CartWidget from "./CartWidget/CartWidget.js";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getCategories } from "../asynmock";
+import CartContext from "../Context/CartContext";
 
 /* Creo un estado para poder guardar las categorías y setearlas */
 const NavBar = () => {
   const [categories, setCategories] = useState([])
+  const { cart } = useContext(CartContext);
 
   useEffect(() => {
     getCategories().then(categories => {
@@ -40,7 +42,8 @@ const NavBar = () => {
           </div>
         </div>
         {/* Llamo al componente del carrito */}
-        <CartWidget />
+        {(cart.length !== 0)?
+        <CartWidget /> : null}
       </div>
     </nav>
   );

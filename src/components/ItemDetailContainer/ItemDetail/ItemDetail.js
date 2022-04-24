@@ -1,6 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 
@@ -34,7 +34,10 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
               </span>
             </p>
           </div>
-          {isInCart(id) ? <Link to="/cart" className="btn btn-outline-secondary goCart">¡Gracias por su compra! Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />}
+          <div className="d-inline justify-content-center">
+            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+          {(isInCart(id)) ? <Link to="/cart" className="btn btn-outline-secondary goCart">Terminar compra</Link> : null}
+          </div>
         </div>
       </div>
     </>

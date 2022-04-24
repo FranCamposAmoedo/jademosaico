@@ -6,4 +6,10 @@
     margin-left: 5px;
     padding: 0px 10px;
     background-color: hsl(0, 0%, 97%);
+    text-decoration: none;
+    color: black;
+}
+
+.btnCarrito:hover {
+    color: #81d8d0;
 }
