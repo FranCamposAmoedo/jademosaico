@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "../asynmock";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { firestoreDb } from "../../services/firebase";
 import ItemList from "./ItemList/ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
@@ -14,13 +15,17 @@ const ItemListContainer = (props) => {
 
   /* Llamo a la función después del renderizado cada vez que se modifica el categoryId */
   useEffect(() => {
-    getProducts(categoryId)
-      .then((prods) => {
-        setProducts(prods);
+      const collectionRef = categoryId
+         ? query(collection(firestoreDb, "products"), where("category", "==", categoryId))
+         : collection(firestoreDb, "products")
+
+      getDocs(collectionRef).then(response => {
+        console.log(response)
+        const products = response.docs.map(doc => {
+          return { id: doc.id, ...doc.data()}
+        })
+        setProducts(products)
       })
-      .catch((error) => {
-        console.log(error);
-      });
   }, [categoryId]);
 
   return (

@@ -3,7 +3,8 @@ import "./CartWidget/CartWidget.js";
 import CartWidget from "./CartWidget/CartWidget.js";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { getCategories } from "../asynmock";
+import { firestoreDb } from "../../services/firebase";
+import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import CartContext from "../Context/CartContext";
 
 /* Creo un estado para poder guardar las categorías y setearlas */
@@ -12,8 +13,11 @@ const NavBar = () => {
   const { cart } = useContext(CartContext);
 
   useEffect(() => {
-    getCategories().then(categories => {
-      setCategories(categories)
+    getDocs(query(collection(firestoreDb, "categories"), orderBy("description", "desc"))).then(response => {
+      const categories = response.docs.map(doc => {
+        return {id: doc.id, ...doc.data()}
+      })
+      setCategories(categories);
     })
   }, [])
 

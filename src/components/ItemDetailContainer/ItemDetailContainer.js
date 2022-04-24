@@ -1,35 +1,32 @@
 import { useState, useEffect } from "react";
-import { getProductsById } from "../asynmock";
+import { firestoreDb } from "../../services/firebase";
+import { getDoc, doc } from "firebase/firestore";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   /* Estado para guardar el detalle del producto */
-  const [products, setProducts] = useState();
+  const [product, setProduct] = useState();
 
   /* Para pasarle a la función getProductsById el Id del producto */
   const { productId } = useParams();
 
   useEffect(() => {
-    getProductsById(productId)
-      .then((prods) => {
-        setProducts(prods);
+       getDoc(doc(firestoreDb, "products", productId)).then(response => {
+        console.log(response)
+        const product = { id: response.id, ...response.data()}
+        setProduct(product)
       })
-      .catch((error) => {
-        console.log(error);
-      });
-
       return (() => {
-        setProducts()
+        setProduct()
     })
-
 }, [productId])
 
   return (
     <>
     {/* Si no hay productos carga un spinner */}
-      {products ? 
-        <ItemDetail {...products} />
+      {product ? 
+        <ItemDetail {...product} />
        : 
         <div className="text-center m-5">
           <div className="spinner-border" role="status">

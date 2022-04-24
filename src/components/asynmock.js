@@ -55,38 +55,3 @@ const products = [
         description: "Plato giratorio de 25 cm de diámetro. Personalizable en otros colores"
     }
 ]
-
-/* Lista de categorías */
-const categories = [
-    {id: "luminarias", description: "Luminarias"},
-    {id: "bandejas", description: "Bandejas"},
-    {id: "platos", description: "Platos"},
-    {id: "accesorios", description: "Accesorios"}
-]
-
-/* Promesa para obtener las categorías */
-export const getCategories = () => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(categories)
-        }, 500)
-    })
-}
-
-/* Promesa para obtener productos (todos o los de su categoría) */
-export const getProducts = (categoryId) => {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            resolve(categoryId ? products.filter(prod => prod.category === categoryId) : products)
-        }, 500)
-    })
-}
-
-/* Promesa para obtener el producto por el Id */
-export const getProductsById = (id) => {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            resolve(products.find(prod => prod.id === id))
-        }, 500)
-    })
-}
