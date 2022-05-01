@@ -1,105 +1,12 @@
-.listTitle {
-    font-family: sans-serif;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.listaProductos {
-    margin: 20px 0;
-    font-family: sans-serif;
-}
-
-.btnEliminarMobile {
-    display: none;
-}
-
-.btnEliminar {
-    width: 170px;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background: red;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-    background: #e62222;
-}
-   
-.btnEliminar, .btnEliminar span {
-    transition: 200ms;
-}
-   
-.btnEliminar .text {
-    transform: translateX(35px);
-    color: white;
-    font-weight: bold;
-}
-   
-.btnEliminar .icon {
-    position: absolute;
-    border-left: 1px solid #c41b1b;
-    transform: translateX(110px);
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-   
-.btnEliminar svg {
-    width: 15px;
-    fill: #eee;
-}
-   
-.btnEliminar:hover {
-    background: #ff3636;
-}
-   
-.btnEliminar:hover .text {
-    color: transparent;
-}
-   
-.btnEliminar:hover .icon {
-    width: 150px;
-    border-left: none;
-    transform: translateX(0);
-}
-   
-.btnEliminar:focus {
-    outline: none;
-}
-   
-.btnEliminar:active .icon svg {
-    transform: scale(0.8);
-}
-
 .totalProducts {
     margin: auto;
+    border-radius: 20px;
     border: 1px solid #81d8d0;
     background-color: #81d8d0;
     color: white;
     font-family: sans-serif;
 }
 
-@media (max-width: 710px) {
-    .btnEliminar {
-        display: none;
-    }
-    .btnEliminarMobile {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        background: red;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-        background: #e62222;
-        color: white;
-        justify-content: center;
-        font-weight: bold;
-    }
-    .btnEliminarMobile:hover {
-        background: #ff3636;
-    }
+.btnOrden {
+    margin-top: 15px;
 }

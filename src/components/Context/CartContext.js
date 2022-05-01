@@ -13,7 +13,7 @@ export const CartContextProvider = ({ children }) => {
             const newProducts = cart.map(prod => {
                 if(prod.id === productToAdd.id) {
                     const newProduct = {
-                        ...prod, quantity: prod.quantity + productToAdd.quantity
+                        ...prod, quantity: productToAdd.quantity
                     }
                     return newProduct;
                 } else {
@@ -46,6 +46,10 @@ export const CartContextProvider = ({ children }) => {
         setCart(products)
     }
 
+    const getQuantityProd = (id) => {
+        return cart.find(prod => prod.id === id)?.quantity;
+    }
+
     const getTotal = () => {
         let total = 0;
         cart.forEach(prod => {
@@ -55,7 +59,7 @@ export const CartContextProvider = ({ children }) => {
     }
 
     return(
-        <CartContext.Provider value={{ cart, addItem, getQuantity, isInCart, clearCart, removeItem, getTotal }}>
+        <CartContext.Provider value={{ cart, addItem, getQuantity, isInCart, clearCart, removeItem, getQuantityProd, getTotal }}>
             {children}
         </CartContext.Provider>
     )

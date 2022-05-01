@@ -7,7 +7,7 @@ import CartContext from "../../Context/CartContext";
 /* Traigo las propiedades desestructurando desde el ItemDetailContainer */
 const ItemDetail = ({ id, img, name, description, price, stock }) => {
 
-  const { addItem, isInCart } = useContext(CartContext);
+  const { addItem, isInCart, getQuantityProd } = useContext(CartContext);
 
   const handleOnAdd = (count) => {
     
@@ -35,7 +35,7 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
             </p>
           </div>
           <div className="d-inline justify-content-center">
-            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+            <ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} />
           {(isInCart(id)) ? <Link to="/cart" className="btn btn-outline-secondary goCart">Terminar compra</Link> : null}
           </div>
         </div>
