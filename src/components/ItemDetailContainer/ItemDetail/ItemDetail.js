@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 
-/* Traigo las propiedades desestructurando desde el ItemDetailContainer */
 const ItemDetail = ({ id, img, name, description, price, stock }) => {
 
   const { addItem, isInCart, getQuantityProd } = useContext(CartContext);
@@ -19,7 +18,6 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
   };
 
   return (
-    /* El detalle del producto */
     <>
       <div className="contenedor">
         <img className="picture" src={img} alt="Luminaria" />
@@ -35,8 +33,8 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
             </p>
           </div>
           <div className="d-inline justify-content-center">
-            <ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} />
-          {(isInCart(id)) ? <Link to="/cart" className="btn btn-outline-secondary goCart">Terminar compra</Link> : null}
+            {stock>0 ? <ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} /> :<Link to="/" className="stock">Sin Stock</Link>}
+            {(isInCart(id)) ? <Link to="/cart" className="btn btn-outline-secondary goCart">Terminar compra</Link> : null}
           </div>
         </div>
       </div>

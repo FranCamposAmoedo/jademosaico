@@ -7,13 +7,10 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = (props) => {
 
-  /* Un estado para guardar los productos en un array */
   const [products, setProducts] = useState([]);
 
-  /* Para poder filtrar por categoría usando la misma función */
   const { categoryId } = useParams();
 
-  /* Llamo a la función después del renderizado cada vez que se modifica el categoryId */
   useEffect(() => {
       const collectionRef = categoryId
          ? query(collection(firestoreDb, "products"), where("category", "==", categoryId))
@@ -30,7 +27,6 @@ const ItemListContainer = (props) => {
 
   return (
     <>
-    {/* Un h1 y luego los productos, que si todavía no se cargaron aparece un spinner */}
       <h1 className="greeting">{props.greeting}</h1>
       {products.length > 0 ? 
         <ItemList products={products} />

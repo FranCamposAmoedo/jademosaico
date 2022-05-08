@@ -5,26 +5,22 @@ import ItemDetail from "./ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  /* Estado para guardar el detalle del producto */
   const [product, setProduct] = useState();
 
-  /* Para pasarle a la función getProductsById el Id del producto */
   const { productId } = useParams();
 
   useEffect(() => {
-       getDoc(doc(firestoreDb, "products", productId)).then(response => {
-        console.log(response)
+      getDoc(doc(firestoreDb, "products", productId)).then(response => {
         const product = { id: response.id, ...response.data()}
         setProduct(product)
       })
       return (() => {
         setProduct()
     })
-}, [productId])
+}, [productId]);
 
   return (
     <>
-    {/* Si no hay productos carga un spinner */}
       {product ? 
         <ItemDetail {...product} />
        : 

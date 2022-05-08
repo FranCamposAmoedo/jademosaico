@@ -7,7 +7,6 @@ import { firestoreDb } from "../../services/firebase";
 import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import CartContext from "../Context/CartContext";
 
-/* Creo un estado para poder guardar las categorías y setearlas */
 const NavBar = () => {
   const [categories, setCategories] = useState([])
   const { cart } = useContext(CartContext);
@@ -22,7 +21,6 @@ const NavBar = () => {
   }, [])
 
   return (
-    /* Uso bootstrap para el NavBar */
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <Link to='/' className="navbar-brand logo">
@@ -39,13 +37,11 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        {/* Mediante un método map cargo cada una de las categorías trayendolas desde el Async Mock */}
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="categories navbar-nav ms-auto">
-            { categories.map(cat => <Link className="nav-link" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</Link>)}
+            {categories.map(cat => <Link className="nav-link" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</Link>)}
           </div>
         </div>
-        {/* Llamo al componente del carrito */}
         {(cart.length !== 0)?
         <CartWidget /> : null}
       </div>

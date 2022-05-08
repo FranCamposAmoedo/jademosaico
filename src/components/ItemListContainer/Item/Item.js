@@ -1,7 +1,6 @@
 import "./Item.css";
 import { Link } from "react-router-dom";
 
-/* Componente que crea cada Card de cada producto que le va a pasar el ItemList */
 const Item = ({ id, name, img }) => {
   return (
     <div className="card cardItem">

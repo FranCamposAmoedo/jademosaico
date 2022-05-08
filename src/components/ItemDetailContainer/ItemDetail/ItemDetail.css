@@ -19,8 +19,7 @@
 .detalles {
     display: block;
     margin: 1rem;
-    padding: 2rem;
-    font-family: sans-serif;  
+    padding: 2rem; 
 }
 
 .detalles h5 {
@@ -39,4 +38,21 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+}
+
+.stock {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.stock:hover {
+    background-color: crimson;
+    color: bisque;
 }

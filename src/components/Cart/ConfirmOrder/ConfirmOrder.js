@@ -3,7 +3,7 @@ import { firestoreDb } from "../../../services/firebase";
 import { useContext, useState } from "react";
 import CartContext from "../../Context/CartContext";
 import { Link } from "react-router-dom";
-import "./FinishOrder.css";
+import "./ConfirmOrder.css";
 
 const initialState = {
     name: "",
@@ -12,7 +12,7 @@ const initialState = {
     tel: ""
 }
 
-const FinishOrder = () => {
+const ConfirmOrder = () => {
     const { cart, clearCart,  getTotal } = useContext(CartContext);
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState(null)
@@ -114,17 +114,22 @@ const FinishOrder = () => {
                     <label htmlFor="floatingLastName">Apellido</label>
                 </div>
                 <div className="form-floating mb-3 inputContainer">
-                    <input type="text" name="address" value={userInfo.address} onChange={getInfo} className="form-control" id="floatingAddress" placeholder="Address" />
-                    <label htmlFor="floatingAddress">Direccion</label>
+                    <input type="email" name="email" value={userInfo.email} onChange={getInfo} className="form-control" id="floatingEmail" placeholder="Email" />
+                    <label htmlFor="floatingEmail">Email</label>
                 </div>
                 <div className="form-floating mb-3 inputContainer">
-                    <input type="text" name="tel" value={userInfo.tel} onChange={getInfo} className="form-control" id="floatingTel" placeholder="Tel" />
-                    <label htmlFor="floatingTel">Telefono</label>
+                    <input type="text" name="address" value={userInfo.address} onChange={getInfo} className="form-control" id="floatingAddress" placeholder="Address" />
+                    <label htmlFor="floatingAddress">Dirección</label>
+                </div>
+                <div className="form-floating mb-3 inputContainer">
+                    <input type="tel" name="tel" value={userInfo.tel} onChange={getInfo} className="form-control" id="floatingTel" placeholder="Tel" />
+                    <label htmlFor="floatingTel">Teléfono</label>
                 </div>
                 <button className="btn btn-success btnOrden" onClick={() => createOrder()}>Enviar Pedido</button>
             </div>
+         
         </>
     )
 }
 
-export default FinishOrder;
+export default ConfirmOrder;

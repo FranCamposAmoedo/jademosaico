@@ -1,22 +1,97 @@
-<h1 align="center">Hi 👋, I'm Francisco Campos Amoedo</h1>
-<h3 align="center">A passionate frontend student from Argentina</h3>
+# Ecommerce Jade Mosaico
 
-- 🔭 I’m currently working on [Jade Mosaico](https://github.com/FranCamposAmoedo/jademosaico)
+_Jade Mosaico es un Ecommerce de productos artesanales hechos con venecitas_
 
-- 🌱 I’m currently learning **React Js**
+## Comenzando 🚀
 
-- 👨‍💻 All of my projects are available at [https://github.com/FranCamposAmoedo](https://github.com/FranCamposAmoedo)
+_En la rama master, cloná el repositorio_
 
-- 📫 How to reach me **francisco.campos.amoedo@gmail.com**
+### Pre-requisitos 📋
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/franciscocamposamoedo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="franciscocamposamoedo" height="30" width="40" /></a>
-<a href="https://fb.com/francamposa" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="francamposa" height="30" width="40" /></a>
-<a href="https://instagram.com/francamposa" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="francamposa" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/ucleklaxahhmepakv3mmcjtw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="ucleklaxahhmepakv3mmcjtw" height="30" width="40" /></a>
-<a href="https://discord.gg/FranJCamposA#8347" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="FranJCamposA#8347" height="30" width="40" /></a>
-</p>
+_Necesitas tener algún editor de código para poder ejecutar la aplicación y conexión a internet_
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> </p>
+```
+Editor de código (Recomendamos Visual Studio Code)
+Acceso a internet
+```
+
+### Instalación 🔧
+
+_Una vez descargado tenés que instalar las dependencias en la pc_
+
+_Dentro del Visual Studio Code, abrí la terminal y ejecutá:_
+
+```
+cd "nombre de la carpeta raíz"
+```
+
+_Luego:_
+
+```
+npm install
+```
+
+_y por último ejecutá:_
+
+```
+npm start
+```
+
+_Una vez hecho ésto, se abrirá el proyecto en tu navegador Web_
+
+## Haciendo una compra en la App ⚙️
+
+* Dentro de la App va a aparecer un catálogo con diferentes productos y un NavBar para poder elegir por categoría. 
+* Clickeando en el botón Ver detalles de cualquier producto, se despliega la descripción del producto, el precio y un contador para agregar unidades al carrito. El botón agregar al carrito, además de agregar el producto al carrito, despliega un nuevo botón que es terminar compra. 
+* Clickeando en ese botón o en el carrito se accede a todos los productos agregados y en éste punto se pueden borrar uno por uno, vaciar el carrito o finalizar la compra.
+* Si se clickea finalizar la compra, se muestra un formulario que hay que completar con los datos del usuario y la dirección de envío. Una vez enviado, nos entrega el nro de orden en caso de que la operación haya concluido satisfactoriamente.
+
+### Componentes 🔩
+
+_Los componentes están organizados en 5 grandes carpetas que a su vez estás contienen subcarpetas, éstas son:_
+
+* **Cart** - Contiene el carrito de las compras dónde a través del llamado al componente ItemCart se van cargando los productos seleccionados con la cantidad y el total.
+Dentro de Cart también se encuentra:
+* ItemCart - Muestra cada producto seleccionado dentro de Cart y permite borrarlo.
+* ConfirmOrder - Contiene la lógica para generar la orden de compra. Chequea si hay stock del producto, actualiza el stock. Dentro del form, toma los datos del comprador y los pushea a Firebase generando un nro de orden de compra y vaciando luego el carrito.
+
+* **Context** - Contiene la lógica y las funciones que luego se deben utilizar en varios componentes. Éstos son: agregar producto, obtener la cantidad total de productos, validad si el producto ya está en el carrito, vaciar carrito, remover producto, obtener la cantidad de un producto y obtener el total.
+
+* **ItemDetailContainer** - Contenedor que mediante el componente ItemDetail, muestra el producto seleccionado.
+Dentro de también se encuentran:
+* ItemCount - Recibe el valor inicial, el stock y la función onAdd para poder incrementar o decrementar la cantidad de productos y retorna 3 botones, +, - y agregar al carrito.
+* ItemDetail - Recibe las propiedades del producto a través de parámetros y funciones del context. Retorna el detalle del producto junto con el ItemCount.
+
+* **ItemListContainer** - Contenedor de todos los objetos que se cargan mediante ItemList. También filtra por categoría.
+La carpeta tiene también:
+* Item - La card del producto con el botón ver detalles.
+* ItemList - Un map de todos los productos para poder mostrarlos en el container.
+
+* **NavBar** - Carga las diferentes categorías desde el Firebase. Contiene el logo y el Cart Widget.
+* CartWidget - Obtiene la cantidad de productos del context y la muestra cuando hay algún producto en el carrito. Si no permanece oculto.
+
+### Carpeta Public y Firestore ⌨️
+
+_Dentro de la carpeta Public se encuentra la carpeta images, dónde están todas las imágenes del proyecto.
+En Firebase está la base de datos de los productos, las categorías y cuando se hace la orden de compra se guardan los datos del usuario._
+
+## Construido con 🛠️
+
+_Se utilizaron las siguientes herramientas:_
+
+* [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+* [BOOTSTRAP](https://getbootstrap.com/)
+* [JAVASCRIPT](https://developer.mozilla.org/es/docs/Web/JavaScript)
+* [REACT](https://es.reactjs.org/docs/getting-started.html)
+
+## Autores ✒️
+
+* **Francisco Campos Amoedo** - [FranCamposAmoedo](https://github.com/FranCamposAmoedo)
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Muchas gracias por compartir!
+---
+⌨️ con ❤️ por [FranCamposAmoedo](https://github.com/FranCamposAmoedo) 😊
