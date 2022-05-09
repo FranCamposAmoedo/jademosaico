@@ -1,9 +1,19 @@
 .cardItem {
     margin: 20px;
-    box-shadow: 3px 3px 15px black;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
 }
 
-.card-text {
+.card-text, .card-title{
     display: flex;
     justify-content: center;
+}
+
+.btn-outline-secondary {
+    color: #454c4b;
+    border-color: #454c4b;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #454c4b;
+    border-color: #454c4b;
 }

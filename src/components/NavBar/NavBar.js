@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import "./CartWidget/CartWidget.js";
 import CartWidget from "./CartWidget/CartWidget.js";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { firestoreDb } from "../../services/firebase";
 import { getDocs, collection, query, orderBy } from "firebase/firestore";
@@ -39,7 +39,7 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="categories navbar-nav ms-auto">
-            {categories.map(cat => <Link className="nav-link" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</Link>)}
+            {categories.map(cat => <NavLink className={({ isActive }) => isActive ? "active-NavLink" : "nav-link"} key={cat.id} exact to={`/category/${cat.id}`}><b>{cat.description}</b></NavLink>)}
           </div>
         </div>
         {(cart.length !== 0)?

@@ -74,21 +74,29 @@ const ConfirmOrder = () => {
 
       if (orderId) {
           return (
-            <div className="d-flex">
-                <div className='d-flex justify-content-between flex-column align-items-center confirmation'>
-                  <h1>CONFIRMACION</h1>
-                  <div className='mb-5'>
+            <>
+              <h1 className="greeting">Orden generada</h1>
+              <hr />
+                <div className="d-flex">
+                  <div className='d-flex justify-content-between flex-column align-items-center confirmation'>
+                    <div className='mb-3'>
                       Su pedido ha sido enviado correctamente
-                  </div>
-                  <h3>Nro orden: <strong>{orderId}</strong></h3>
-                  <h3><Link className="btn btn-outline-secondary" to="/">Volver al Catalogo</Link></h3>
-               </div>
-            </div>
+                    </div>
+                    <h3>Nro orden: <strong>{orderId}</strong></h3>
+                    <h3><Link className="btn btn-outline-success btn-back" to="/">Volver al Catalogo</Link></h3>
+                 </div>
+                </div>
+            </>
           )
       }
     
       if(loading) {
-        return <h1 className="greeting">Se está generando su orden</h1>
+        return (
+          <>
+            <h1 className="greeting">Se está generando su orden</h1>
+            <hr />
+          </>
+        )
       }
      
       if (cart.length === 0) {
@@ -104,6 +112,8 @@ const ConfirmOrder = () => {
 
     return (
         <>
+        <h1 className="greeting">Complete el formulario</h1>
+        <hr />
             <div className="form">
                 <div className="form-floating mb-3 inputContainer">
                     <input type="text" name="name" value={userInfo.name} onChange={getInfo} className="form-control" id="floatingName" placeholder="Name" />
@@ -125,7 +135,7 @@ const ConfirmOrder = () => {
                     <input type="tel" name="tel" value={userInfo.tel} onChange={getInfo} className="form-control" id="floatingTel" placeholder="Tel" />
                     <label htmlFor="floatingTel">Teléfono</label>
                 </div>
-                <button className="btn btn-success btnOrden" onClick={() => createOrder()}>Enviar Pedido</button>
+                <button className="btn btn-outline-success btnOrden" onClick={() => createOrder()}>Enviar Pedido</button>
             </div>
          
         </>

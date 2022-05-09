@@ -19,7 +19,7 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
 
   return (
     <>
-      <div className="contenedor">
+      <div className="container-detail">
         <img className="picture" src={img} alt="Luminaria" />
         <div className="padre-detalles">
           <div className="detalles">
@@ -32,7 +32,7 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
               </span>
             </p>
           </div>
-          <div className="d-inline justify-content-center">
+          <div>
             {stock>0 ? <ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} /> :<Link to="/" className="stock">Sin Stock</Link>}
             {(isInCart(id)) ? <Link to="/cart" className="btn btn-outline-secondary goCart">Terminar compra</Link> : null}
           </div>

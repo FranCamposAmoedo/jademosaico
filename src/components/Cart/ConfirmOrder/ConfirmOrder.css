@@ -1,20 +1,33 @@
 .form{
     margin: auto;
     margin-top: 2rem;
+    padding: 2rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #454c4b;
+    width: 50%;
+    border-radius: 15px;
 }
 
 .inputContainer{
-    width: 30%;
+    width: 90%;
 }
 
 .confirmation {
     margin: 50px auto;
     padding: 15px;
-    border: 1px solid #81d8d0;
+    border: 1px solid #454c4b;
     border-radius: 20px;
-    background-color: #81d8d0;
+    background-color: #454c4b;
     color: white;
+}
+
+.btn-back {
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    background-color: #86c6c6;
+    border-color: #86c6c6;
 }

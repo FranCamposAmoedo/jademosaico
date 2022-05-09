@@ -1,5 +1,24 @@
 .navbar {
-    background-color: hsl(0, 0%, 97%);
+    background-color: #c6c6c6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #454c4b;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.active-NavLink {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0.5rem 0 0.5rem;
+    align-self: center;
+}
+
+.active-NavLink:hover {
+    color: #fff;
 }
 
 .logo {

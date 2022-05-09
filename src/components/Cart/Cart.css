@@ -1,9 +1,20 @@
 .totalProducts {
     margin: auto;
     border-radius: 20px;
-    border: 1px solid #81d8d0;
-    background-color: #81d8d0;
+    background-color: #454c4b;
     color: white;
+}
+
+.btn-outline-danger, .btn-outline-success {
+    width: 180px;
+    color: #454c4b;
+    background-color: white;
+    border-color: #454c4b;
+    border-radius: 10px;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff3636;
 }
 
 .btnOrden {

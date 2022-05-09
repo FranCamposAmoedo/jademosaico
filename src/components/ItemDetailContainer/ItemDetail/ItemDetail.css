@@ -1,12 +1,13 @@
 .picture {
     width: 28.5rem;
-    box-shadow: 2px 2px 12px black;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
-.contenedor {
+.container-detail {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 4rem;
 }
 
@@ -37,7 +38,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
+    width: 400px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .stock {

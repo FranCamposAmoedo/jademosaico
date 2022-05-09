@@ -27,7 +27,8 @@ const ItemListContainer = (props) => {
 
   return (
     <>
-      <h1 className="greeting">{props.greeting}</h1>
+      <h1 className="greeting">{props.greeting}<b>&nbsp; Jade Mosaico</b></h1>
+      <hr />
       {products.length > 0 ? 
         <ItemList products={products} />
        : 

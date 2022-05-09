@@ -14,8 +14,8 @@ const App = () => {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a Jade Mosaico"} />} />
-            <Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos"} />} />
+            <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a "} />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos,"} />} />
             <Route path="/item/:productId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/order" element={<ConfirmOrder />} />
