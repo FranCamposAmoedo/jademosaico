@@ -1,0 +1,43 @@
+.ctn-footer {
+    color: #454c4b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    .ctn-footer {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .div-footer {
+        justify-content: center!important;
+    }
+
+    .rights {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.soc-net, .rights {
+    color: #454c4b;
+}
+
+.soc-net:hover {
+    color: #86c6c6;
+}
+
+.link-gitHub {
+    text-decoration: none;
+    font-weight: 600;
+    color: #454c4b;
+}
+
+.link-gitHub:hover {
+    color: #86c6c6;
+}

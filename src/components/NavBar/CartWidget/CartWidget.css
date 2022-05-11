@@ -11,9 +11,9 @@
 }
 
 .btnCarrito {
-    color: #454c4b;
+    color: white;
 }
 
 .btnCarrito:hover {
-    color: white;
+    color: #454c4b;
 }

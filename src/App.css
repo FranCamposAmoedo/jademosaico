@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
+    margin-bottom: 150px;
 }

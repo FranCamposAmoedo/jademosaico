@@ -6,6 +6,7 @@ import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./components/Context/CartContext";
 import ConfirmOrder from "./components/Cart/ConfirmOrder/ConfirmOrder";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/order" element={<ConfirmOrder />} />
             <Route path="*" element={<h1>NOT FOUND 404</h1>} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CartContextProvider>
     </>

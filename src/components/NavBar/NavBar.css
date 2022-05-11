@@ -3,22 +3,22 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #454c4b;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
     color: white;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #454c4b;
+}
+
 .active-NavLink {
-    color: #fff;
+    color: #454c4b;
     text-decoration: none;
     padding: 0 0.5rem 0 0.5rem;
     align-self: center;
 }
 
 .active-NavLink:hover {
-    color: #fff;
+    color: #454c4b;
 }
 
 .logo {

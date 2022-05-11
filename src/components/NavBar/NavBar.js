@@ -39,7 +39,7 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="categories navbar-nav ms-auto">
-            {categories.map(cat => <NavLink className={({ isActive }) => isActive ? "active-NavLink" : "nav-link"} key={cat.id} exact to={`/category/${cat.id}`}><b>{cat.description}</b></NavLink>)}
+            {categories.map(cat => <NavLink className={({ isActive }) => isActive ? "active-NavLink" : "nav-link"} key={cat.id} exact to={`/category/${cat.id}`}>{cat.description}</NavLink>)}
           </div>
         </div>
         {(cart.length !== 0)?
