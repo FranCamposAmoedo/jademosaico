@@ -1,0 +1,15 @@
+.alert-message {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.Success {
+    background-color: #86c6c6;
+}
+
+.Error {
+    background-color: #ff3636;
+}
