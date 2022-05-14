@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSederId,
-  appId: process.env.REACT_APP_appId
+  apiKey: "AIzaSyBa3l5XvgwPU9l15MJCIL3jccUyRxbiyd8",
+  authDomain: "jade-mosaico.firebaseapp.com",
+  projectId: "jade-mosaico",
+  storageBucket: "jade-mosaico.appspot.com",
+  messagingSenderId: "872696405274",
+  appId: "1:872696405274:web:adaf89b1054e0ba4b720a3"
 };
 
 // Initialize Firebase
