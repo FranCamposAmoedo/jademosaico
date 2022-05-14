@@ -36,4 +36,17 @@
     .form {
         width: 85%;
     }
+
+    .confirmation {
+        width: 280px;
+    }
+
+    .confirmation div {
+        font-size: 0.8rem;
+
+    }
+
+    .nroOrden {
+        font-size: 1.1rem;
+    }
 }

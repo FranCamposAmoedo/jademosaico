@@ -24,3 +24,10 @@
 .btnOrden:hover {
     background-color: #86c6c6;
 }
+
+@media (max-width: 460px) {
+    .totalProducts {
+        width: 280px;      
+    }
+}
+

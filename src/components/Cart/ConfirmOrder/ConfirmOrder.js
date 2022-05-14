@@ -79,10 +79,10 @@ const ConfirmOrder = () => {
               <hr />
                 <div className="d-flex">
                   <div className='d-flex justify-content-between flex-column align-items-center confirmation'>
-                    <div className='mb-3'>
+                    <div className="mb-3">
                       Su pedido ha sido enviado correctamente
                     </div>
-                    <h3>Nro orden: <strong>{orderId}</strong></h3>
+                    <h3 className="nroOrden">Nro orden: <strong>{orderId}</strong></h3>
                     <h3><Link className="btn btn-outline-success btn-back" to="/">Volver al Catalogo</Link></h3>
                  </div>
                 </div>

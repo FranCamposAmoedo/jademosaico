@@ -93,3 +93,10 @@
         background: #ff3636;
     }
 }
+
+@media (max-width: 460px) {
+    .listTitle, .listaProductos {
+        font-size: 0.6rem;        
+    }
+}
+
