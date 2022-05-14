@@ -37,7 +37,7 @@ const ItemCart = () => {
                   </svg>
                 </span>
               </button>
-              <button className="col-3 btnEliminarMobile">X</button>
+              <button className="col-3 btnEliminarMobile" onClick={() => removeItem(prod.id)}>X</button>
             </div>
           </div>
         ))}
