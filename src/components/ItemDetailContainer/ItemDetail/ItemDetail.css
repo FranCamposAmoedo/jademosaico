@@ -19,8 +19,11 @@
 }
 
 .detalles {
-    display: block;
-    margin: 1rem;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
     padding: 2rem; 
 }
 
@@ -29,6 +32,10 @@
     margin-bottom: 2rem;
     text-align: center;
     font-weight: bold;
+}
+
+.item-description {
+    max-width: 420px;
 }
 
 .precio {
@@ -59,4 +66,14 @@
 .stock:hover {
     background-color: crimson;
     color: bisque;
+}
+
+@media (max-width: 460px) {
+    .picture {
+        width: 280px;
+    }
+
+    .detalles {
+        width: 280px;
+    }
 }

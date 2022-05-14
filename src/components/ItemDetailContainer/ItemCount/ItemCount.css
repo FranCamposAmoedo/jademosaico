@@ -29,3 +29,9 @@
     border: 1px solid #6c757d;
     color: white;
 }
+
+@media (max-width: 460px) {
+    .counter {
+        width: 280px;
+    }
+}

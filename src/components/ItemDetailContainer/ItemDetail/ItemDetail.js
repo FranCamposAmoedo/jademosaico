@@ -28,13 +28,8 @@ const ItemDetail = ({ id, img, name, description, price, stock }) => {
         <div className="padre-detalles">
           <div className="detalles">
             <h5>{name}</h5>
-            <p>
-              {description}
-              <br />
-              <span className="precio">
-                Precio: <b>${price}</b>
-              </span>
-            </p>
+            <p className="item-description">{description}</p>
+            <p className="precio">Precio: <b>${price}</b></p>                         
           </div>
           <div>
             {stock>0 ? <ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} /> :<Link to="/" className="stock">Sin Stock</Link>}

@@ -31,3 +31,9 @@
     background-color: #86c6c6;
     border-color: #86c6c6;
 }
+
+@media (max-width: 600px) {
+    .form {
+        width: 85%;
+    }
+}
