@@ -57,7 +57,7 @@ Dentro de Cart también se encuentra:
 * ItemCart - Muestra cada producto seleccionado dentro de Cart y permite borrarlo.
 * ConfirmOrder - Contiene la lógica para generar la orden de compra. Chequea si hay stock del producto, actualiza el stock. Dentro del form, toma los datos del comprador y los pushea a Firebase generando un nro de orden de compra y vaciando luego el carrito.
 
-* **Context** - Contiene la lógica y las funciones que luego se deben utilizar en varios componentes. Éstos son: agregar producto, obtener la cantidad total de productos, validad si el producto ya está en el carrito, vaciar carrito, remover producto, obtener la cantidad de un producto y obtener el total.
+* **Footer** - Contiene los derechos de autor y las redes sociales del proyecto.
 
 * **ItemDetailContainer** - Contenedor que mediante el componente ItemDetail, muestra el producto seleccionado.
 Dentro de también se encuentran:
@@ -71,6 +71,12 @@ La carpeta tiene también:
 
 * **NavBar** - Carga las diferentes categorías desde el Firebase. Contiene el logo y el Cart Widget.
 * CartWidget - Obtiene la cantidad de productos del context y la muestra cuando hay algún producto en el carrito. Si no permanece oculto.
+
+Por fuera de la carpeta de components, se encuentran 2 carpetas más.
+
+* **Context** - Contiene la lógica y las funciones que luego se deben utilizar en varios componentes. Éstos son: agregar producto, obtener la cantidad total de productos, validad si el producto ya está en el carrito, vaciar carrito, remover producto, obtener la cantidad de un producto y obtener el total.
+
+* **Notification** - Muestra un mensaje del tipo alert cuando el comprador hace click en agregar al carrito indicando la cantidad de productos agregados y el nombre del producto.
 
 ### Carpeta Public y Firestore ⌨️
 
@@ -93,6 +99,7 @@ _Se utilizaron las siguientes herramientas:_
 
 ## Expresiones de Gratitud 🎁
 
+* Gracias a mi profesor [Sebastián Zuviria](https://github.com/szuviria) y a mi tutor [Rodrigo Maestre] que sin ellos no hubiese sido posible.
 * Comenta a otros sobre este proyecto 📢
 * Muchas gracias por compartir!
 ---
