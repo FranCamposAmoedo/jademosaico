@@ -99,7 +99,7 @@ _Se utilizaron las siguientes herramientas:_
 
 ## Expresiones de Gratitud 🎁
 
-* Gracias a mi profesor [Sebastián Zuviria](https://github.com/szuviria) y a mi tutor [Rodrigo Maestre] que sin ellos no hubiese sido posible.
+* Gracias a mi profesor [Sebastián Zuviria](https://github.com/szuviria) y a mi tutor Rodrigo Maestre que sin ellos no hubiese sido posible.
 * Comenta a otros sobre este proyecto 📢
 * Muchas gracias por compartir!
 ---
