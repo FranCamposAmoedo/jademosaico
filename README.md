@@ -46,6 +46,8 @@ _Una vez hecho ésto, se abrirá el proyecto en tu navegador Web_
 * Clickeando en ese botón o en el carrito se accede a todos los productos agregados y en éste punto se pueden borrar uno por uno, vaciar el carrito o finalizar la compra.
 * Si se clickea finalizar la compra, se muestra un formulario que hay que completar con los datos del usuario y la dirección de envío. Una vez enviado, nos entrega el nro de orden en caso de que la operación haya concluido satisfactoriamente.
 
+![JadeMosaico](https://user-images.githubusercontent.com/89227073/168498543-b2cfc52a-fdfc-4e48-8212-22955dca8bec.gif)
+
 ### Componentes 🔩
 
 _Los componentes están organizados en 5 grandes carpetas que a su vez estás contienen subcarpetas, éstas son:_
