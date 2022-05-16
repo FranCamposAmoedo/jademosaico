@@ -42,8 +42,7 @@ const NavBar = () => {
             {categories.map(cat => <NavLink className={({ isActive }) => isActive ? "active-NavLink" : "nav-link"} key={cat.id} exact to={`/category/${cat.id}`}>{cat.description}</NavLink>)}
           </div>
         </div>
-        {(cart.length !== 0)?
-        <CartWidget /> : null}
+        {(cart.length !== 0) ? <CartWidget /> : null}
       </div>
     </nav>
   );

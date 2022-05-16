@@ -10,20 +10,19 @@ const ItemDetailContainer = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-      getDoc(doc(firestoreDb, "products", productId)).then(response => {
-        const product = { id: response.id, ...response.data()}
-        setProduct(product)
-      })
-      return (() => {
-        setProduct()
+    getDoc(doc(firestoreDb, "products", productId)).then(response => {
+      const product = { id: response.id, ...response.data()}
+      setProduct(product)
     })
-}, [productId]);
+    return (() => {
+      setProduct()
+    })
+  }, [productId]);
 
   return (
     <>
       {product ? 
-        <ItemDetail {...product} />
-       : 
+        <ItemDetail {...product} /> : 
         <div className="text-center m-5">
           <div className="spinner-border" role="status">
             <span className="visually-hidden">Loading...</span>

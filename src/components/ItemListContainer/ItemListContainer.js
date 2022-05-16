@@ -12,17 +12,16 @@ const ItemListContainer = (props) => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-      const collectionRef = categoryId
-         ? query(collection(firestoreDb, "products"), where("category", "==", categoryId))
-         : collection(firestoreDb, "products")
+    const collectionRef = categoryId
+      ? query(collection(firestoreDb, "products"), where("category", "==", categoryId))
+      : collection(firestoreDb, "products")
 
-      getDocs(collectionRef).then(response => {
-        console.log(response)
-        const products = response.docs.map(doc => {
-          return { id: doc.id, ...doc.data()}
-        })
-        setProducts(products)
+    getDocs(collectionRef).then(response => {
+      const products = response.docs.map(doc => {
+        return { id: doc.id, ...doc.data()}
       })
+      setProducts(products)
+    })
   }, [categoryId]);
 
   return (
@@ -30,8 +29,7 @@ const ItemListContainer = (props) => {
       <h1 className="greeting">{props.greeting}<b>&nbsp; Jade Mosaico</b></h1>
       <hr />
       {products.length > 0 ? 
-        <ItemList products={products} />
-       : 
+        <ItemList products={products} /> : 
         <div className="text-center m-5">
           <div className="spinner-border" role="status">
             <span className="visually-hidden">Loading...</span>

@@ -13,7 +13,7 @@ const Cart = () => {
       <>
         <h1 className="greeting">El carrito está vacío</h1>
         <div className="d-flex justify-content-center mt-5">
-            <Link className="btn btn-outline-secondary" to={"/"}>Volver al Inicio</Link>
+          <Link className="btn btn-outline-secondary" to={"/"}>Volver al Inicio</Link>
         </div>   
       </>
     );

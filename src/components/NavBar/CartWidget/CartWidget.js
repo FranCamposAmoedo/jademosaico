@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 const CartWidget = () => {
 
-    const { getQuantity } = useContext(CartContext);
+  const { getQuantity } = useContext(CartContext);
 
-    return (
-        <Link to={"/cart"} className="btnCarrito">
-            <CgShoppingCart size ={25} />
-            { getQuantity() }
-        </Link>
-    )
+  return (
+    <Link to={"/cart"} className="btnCarrito">
+      <CgShoppingCart size ={25} />
+        { getQuantity() }
+    </Link>
+  )
 }
 
 export default CartWidget;
